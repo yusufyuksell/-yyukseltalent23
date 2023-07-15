@@ -28,6 +28,7 @@ SELECTION-SCREEN END OF BLOCK b2.
 
 START-OF-SELECTION.
 
+
   IF p_t_at EQ abap_true.
     TRY.
         APPEND VALUE #( t_id = p_id

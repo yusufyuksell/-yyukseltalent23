@@ -13,7 +13,7 @@
    <FUNCTIONS>
     <item>
      <FUNCNAME>TABLEFRAME_ZOT_25_PERSONEL</FUNCNAME>
-     <SHORT_TEXT>Extended Table Maintenance: Upper Level</SHORT_TEXT>
+     <SHORT_TEXT>Genişletilmiş tablo bakımı: Üst düzey</SHORT_TEXT>
      <IMPORT>
       <RSIMP>
        <PARAMETER>VIEW_ACTION</PARAMETER>
@@ -107,7 +107,7 @@
     <item>
      <FUNCNAME>TABLEPROC_ZOT_25_PERSONEL</FUNCNAME>
      <GLOBAL_FLAG>X</GLOBAL_FLAG>
-     <SHORT_TEXT>Lower-level extended table maintenance</SHORT_TEXT>
+     <SHORT_TEXT>Genişletilmiş tablo bakımı: Alt düzey</SHORT_TEXT>
      <IMPORT>
       <RSIMP>
        <PARAMETER>FCODE</PARAMETER>
@@ -273,7 +273,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0001</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_MAST</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_MAST</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0001</NEXTSCREEN>
       <LINES>061</LINES>
@@ -376,13 +376,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-PERSONEL_NO</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -391,13 +392,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-ADI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -406,13 +408,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-SOYADI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -421,13 +424,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-CINSIYETI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>004</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>030</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -436,13 +440,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-D_YERI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>005</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -451,13 +456,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-D_TARIHI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>006</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -466,13 +472,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-MEDENI_HAL</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>007</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -481,13 +488,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_MAST</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_MAST-COCUK_SAYISI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>008</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>006</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -653,7 +661,7 @@
        <LINE>001</LINE>
        <COLUMN>008</COLUMN>
        <LENGTH>006</LENGTH>
-       <VISLENGTH>006</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>INT2</FORMAT>
        <FROM_DICT>X</FROM_DICT>
@@ -784,7 +792,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0002</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_ITUR</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_ITUR</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0002</NEXTSCREEN>
       <LINES>061</LINES>
@@ -887,13 +895,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ITUR</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ITUR-ILETISIM_TUR</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -902,13 +911,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ITUR</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ITUR-ILETISIM_TUR_T</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>080</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -931,11 +941,11 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ITUR</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
        <NAME>ZOT_25_T_P_ITUR-ILETISIM_TUR</NAME>
-       <TEXT>_</TEXT>
+       <TEXT>__</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
+       <LENGTH>002</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <GROUP1>KEY</GROUP1>
        <FORMAT>CHAR</FORMAT>
@@ -1042,7 +1052,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0003</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_ILTSM</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_ILTSM</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0003</NEXTSCREEN>
       <LINES>061</LINES>
@@ -1145,13 +1155,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ILTSM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ILTSM-PERSONEL_NO</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1160,13 +1171,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ILTSM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ILTSM-ILETISIM_TUR</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1175,13 +1187,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ILTSM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ILTSM-ILETISIM_TANITICISI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>040</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1223,11 +1236,11 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ILTSM</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
        <NAME>ZOT_25_T_P_ILTSM-ILETISIM_TUR</NAME>
-       <TEXT>_</TEXT>
+       <TEXT>__</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
+       <LENGTH>002</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
@@ -1336,7 +1349,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0004</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_AILE</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_AILE</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0004</NEXTSCREEN>
       <LINES>061</LINES>
@@ -1439,13 +1452,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-PERSONEL_NO</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1454,13 +1468,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-AILE_TANIT</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>040</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1469,13 +1484,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-ADI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1484,13 +1500,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-SOYADI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>004</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1499,13 +1516,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-TELEFON</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>005</COLUMN>
        <LENGTH>040</LENGTH>
-       <VISLENGTH>002</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1514,13 +1532,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-SOKAK</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>006</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1529,13 +1548,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-IL</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>007</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1544,13 +1564,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_AILE</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_AILE-ULKE</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>008</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1647,7 +1668,7 @@
        <LINE>001</LINE>
        <COLUMN>005</COLUMN>
        <LENGTH>002</LENGTH>
-       <VISLENGTH>002</VISLENGTH>
+       <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
@@ -1806,7 +1827,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0005</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_ATUR</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_ATUR</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0005</NEXTSCREEN>
       <LINES>061</LINES>
@@ -1909,13 +1930,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ATUR</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ATUR-AILE_TANIT</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>040</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -2027,7 +2049,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0006</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_ETUR</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_ETUR</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0006</NEXTSCREEN>
       <LINES>061</LINES>
@@ -2130,13 +2152,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_ETUR</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_ETUR-EGT_TUR</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -2250,7 +2273,7 @@
       <PROGRAM>SAPLZOT_25_PERSONEL</PROGRAM>
       <SCREEN>0007</SCREEN>
       <LANGUAGE>T</LANGUAGE>
-      <DESCRIPT>View Maintenance: Overview Screen ZOT_25_T_P_EGTM</DESCRIPT>
+      <DESCRIPT>Görünüm bakımı: Genel bakış ekranı ZOT_25_T_P_EGTM</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>0007</NEXTSCREEN>
       <LINES>061</LINES>
@@ -2353,13 +2376,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_EGTM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_EGTM-PERSONEL_NO</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>010</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -2368,13 +2392,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_EGTM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_EGTM-EGT_KOD</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -2383,13 +2408,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_EGTM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_EGTM-OKUL_ADI</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>050</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -2398,13 +2424,14 @@
        <CONT_NAME>TCTRL_ZOT_25_T_P_EGTM</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>*ZOT_25_T_P_EGTM-IL</NAME>
-       <TEXT>+_______________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>004</COLUMN>
        <LENGTH>040</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
