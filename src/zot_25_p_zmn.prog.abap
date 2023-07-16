@@ -4,7 +4,8 @@
 *&
 *&---------------------------------------------------------------------*
 REPORT zot_25_p_zmn.
-TABLES: zot_25_t_zmn.
+TABLES: zot_25_t_zmn,
+        zot_25_t_veriler.
 
 DATA: gv_id TYPE int1.
 DATA: gv_count.
@@ -14,6 +15,9 @@ DATA: it_return TYPE TABLE OF ddshretval,
 
 DATA: lt_main TYPE TABLE OF zot_25_t_zmn.
 DATA: ls_main TYPE zot_25_t_zmn.
+
+DATA : gs_veriler TYPE zot_25_t_veriler,
+       gt_veriler TYPE TABLE OF zot_25_t_veriler.
 
 DATA: seconds TYPE i.
 DATA: rest    TYPE i.
@@ -96,12 +100,31 @@ START-OF-SELECTION.
       ay_fark   = ay_farki.
       gun_fark  = gun_farki.
 
+      IF gun_fark IS NOT INITIAL .
+        gun_fark = gun_fark - 1.
+      ENDIF.
+
+      TRY.
+          APPEND VALUE #( id           = s_id-low + lv_loop
+                          yil_fark     = yil_fark
+                          ay_fark      = ay_fark
+                          gun_fark     = gun_fark
+                          saat_fark    = saat_fark
+                          dakika_fark  = dakika_fark
+                          saniye_fark  = gun_fark
+                            ) TO gt_veriler .
+          INSERT zot_25_t_veriler  FROM TABLE gt_veriler .
+        CATCH cx_sy_open_sql_db.
+      ENDTRY.
 
 
 
 
+      WRITE:/ yil_fark NO-ZERO, 'yil',  ay_fark NO-ZERO ,'ay',   gun_fark NO-ZERO,'gün',
+              saat_fark NO-ZERO,'saat', dakika_fark NO-ZERO,'dakika', saniye_fark NO-ZERO, 'saniye', 'fark vardır.'.
+      "WRITE / | { s_id-low + lv_loop  }. indexe ait kayıtta; { yil_fark } yıl, { ay_fark } ay, { gun_fark } gun, { saat_fark } saat, { dakika_fark } dakika, { saniye_fark } saniye fark vardır. | .
+      ULINE.
 
-      WRITE:/ | { s_id-low + lv_loop  }. indexe ait kayıtta; { yil_fark } yıl, { ay_fark } ay, { gun_fark } gun, { saat_fark } saat, { dakika_fark } dakika, { saniye_fark } saniye fark vardır. | .
       lv_loop = lv_loop + 1.
     ELSE.
       WRITE :/ 'Error'.
