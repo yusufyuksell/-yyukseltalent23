@@ -88,3 +88,8 @@ DELETE gt_modify_table WHERE menge < 10.
 SORT gt_modify_table ASCENDING  BY menge.
 
 SORT gt_collect DESCENDING BY menge.
+
+
+
+cl_demo_output=>display( gt_modify_table ).
+cl_demo_output=>display( gt_collect ).

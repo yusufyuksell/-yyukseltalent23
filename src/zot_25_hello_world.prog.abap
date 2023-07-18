@@ -5,4 +5,4 @@
 *&---------------------------------------------------------------------*
 REPORT zot_25_hello_world.
 
-write 'Hello World'.
+write: 'Hello World.'.

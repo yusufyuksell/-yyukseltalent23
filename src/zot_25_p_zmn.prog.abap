@@ -7,7 +7,7 @@ REPORT zot_25_p_zmn.
 TABLES: zot_25_t_zmn,
         zot_25_t_veriler.
 
-DATA: gv_id TYPE int1.
+DATA: gv_id TYPE zot_25_e_index.
 DATA: gv_count.
 
 DATA: it_return TYPE TABLE OF ddshretval,
@@ -29,18 +29,18 @@ DATA: yil_farki TYPE pea_scryy,
 
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
-  SELECT-OPTIONS: s_id FOR gv_id MATCHCODE OBJECT zot_25_sh_zmn .
+  SELECT-OPTIONS: s_id FOR gv_id." MATCHCODE OBJECT zot_25_sh_zmn .
 SELECTION-SCREEN END OF BLOCK b1.
 
 START-OF-SELECTION.
 
-  DATA lr_id TYPE RANGE OF zot_25_t_zmn-id.
-  APPEND VALUE #( sign = 'I' option = 'BT' low = s_id-low
-                                           high = s_id-high ) TO lr_id.
+  "DATA lr_id TYPE RANGE OF zot_25_t_zmn-id.
+  "APPEND VALUE #( sign = 'I' option = 'BT' low = lr_id-low
+  "                                         high = lr_id-high ) TO lr_id.
 
   SELECT *
   FROM zot_25_t_zmn
-  WHERE id IN @lr_id
+  WHERE id IN @s_id
   INTO TABLE @lt_main.
 
   gv_count = 0.
@@ -100,9 +100,6 @@ START-OF-SELECTION.
       ay_fark   = ay_farki.
       gun_fark  = gun_farki.
 
-      IF gun_fark IS NOT INITIAL .
-        gun_fark = gun_fark - 1.
-      ENDIF.
 
       TRY.
           APPEND VALUE #( id           = s_id-low + lv_loop
@@ -118,9 +115,9 @@ START-OF-SELECTION.
       ENDTRY.
 
 
+      DATA(current_id) = s_id-low + lv_loop.
 
-
-      WRITE:/ yil_fark NO-ZERO, 'yil',  ay_fark NO-ZERO ,'ay',   gun_fark NO-ZERO,'gün',
+      WRITE:/ current_id , '. indexe ait kayıtta;', yil_fark NO-ZERO, 'yil',  ay_fark NO-ZERO ,'ay',   gun_fark NO-ZERO,'gün',
               saat_fark NO-ZERO,'saat', dakika_fark NO-ZERO,'dakika', saniye_fark NO-ZERO, 'saniye', 'fark vardır.'.
       "WRITE / | { s_id-low + lv_loop  }. indexe ait kayıtta; { yil_fark } yıl, { ay_fark } ay, { gun_fark } gun, { saat_fark } saat, { dakika_fark } dakika, { saniye_fark } saniye fark vardır. | .
       ULINE.
