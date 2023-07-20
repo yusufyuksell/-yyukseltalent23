@@ -11,7 +11,6 @@ INITIALIZATION.
   go_main = lcl_main_controller=>get_instance(  ).
 
   TABLES: eban,ekpo.
-  DATA(ls_layo) = VALUE slis_fieldcat_alv(  ) .
 
   DATA: gt_fieldcatalog TYPE slis_t_fieldcat_alv,
         gs_fieldcatalog TYPE slis_fieldcat_alv.
@@ -80,12 +79,36 @@ START-OF-SELECTION.
     "cl_demo_output=>write( gt_sat_baz ).
     "go_main->display_grid( ).
 
-    DATA(lt_fcat_eban) = VALUE slis_t_fieldcat_alv( (  fieldname = 'BANFN' seltext_m = 'SAT No'  )
-                                                ( fieldname = 'BNFPO' seltext_m = 'SAT Kalem No' )
-                                                ( fieldname = 'BSART' seltext_m = 'SAT Belge Türü' )
-                                                ( fieldname = 'MATNR' seltext_m = 'Malzeme No' )
-                                                ( fieldname = 'MENGE' seltext_m = 'SAT Miktarı'  )
-                                                ( fieldname = 'MEINS' seltext_m = 'SAT Ölçü Miktarı'  ) ).
+    gs_fieldcatalog-fieldname = 'BANFN'.
+    gs_fieldcatalog-seltext_m = 'SAT No:'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
+    gs_fieldcatalog-fieldname = 'BNFPO'.
+    gs_fieldcatalog-seltext_m = 'SAT Kalem No:'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
+    gs_fieldcatalog-fieldname = 'BSART'.
+    gs_fieldcatalog-seltext_m = 'SAT Belge Türü'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
+    gs_fieldcatalog-fieldname = 'MATNR'.
+    gs_fieldcatalog-seltext_m = 'Malzeme No'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
+    gs_fieldcatalog-fieldname = 'MENGE'.
+    gs_fieldcatalog-seltext_m = 'SAT Miktarı'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
+    gs_fieldcatalog-fieldname = 'MEINS'.
+    gs_fieldcatalog-seltext_m = 'SAT Ölçü Miktarı'.
+    APPEND gs_fieldcatalog TO gt_fieldcatalog.
+    CLEAR gs_fieldcatalog.
+
 
     LOOP AT gt_sat_baz INTO DATA(gs_sat_baz).
       IF gs_sat_baz-menge > 10.
@@ -101,7 +124,7 @@ START-OF-SELECTION.
     CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
       EXPORTING
         i_callback_program     = sy-repid
-        it_fieldcat            = lt_fcat_eban
+        it_fieldcat            = gt_fieldcatalog
         i_callback_top_of_page = 'TOP-OF-PAGE'
         is_layout              = gs_layout
       TABLES
@@ -117,7 +140,7 @@ START-OF-SELECTION.
     SELECT ekpo~ebeln,
            ekpo~ebelp,
            ekpo~matnr,
-           ekpo~ktmng,
+           ekpo~menge,
            ekpo~meins
            FROM ekpo INNER JOIN eban ON eban~banfn = ekpo~banfn
                                        AND eban~bnfpo = ekpo~bnfpo
@@ -128,12 +151,14 @@ START-OF-SELECTION.
     DATA(lt_fcat_ekpo) = VALUE slis_t_fieldcat_alv( ( fieldname = 'EBELN' seltext_m = 'SAS No'  )
                                                     ( fieldname = 'EBELP'  seltext_m = 'SAS Kalem No' )
                                                     ( fieldname = 'MATNR'  seltext_m = 'SAS Malzeme' )
-                                                    ( fieldname = 'KTMNG'  seltext_m = 'SAS Miktarı' )
+                                                    ( fieldname = 'MENGE'  seltext_m = 'SAS Miktarı' )
                                                     ( fieldname = 'MEINS'  seltext_m = 'Ölçü Birimi'  ) ).
-
+DATA: lv_tabix type sy-tabix.
     LOOP AT gt_sas_baz INTO DATA(gs_sas_baz).
       IF gs_sas_baz-menge < 10.
         gs_sas_baz-line_color = 'C510'.
+      "else.
+        "gs_sas_baz-line_color = 'C610'.
         MODIFY gt_sas_baz FROM gs_sas_baz.
       ENDIF.
 
@@ -185,7 +210,7 @@ FORM top-of-page.
   CONCATENATE sy-uzeit(2)
               sy-uzeit+2(2)
               sy-uzeit+4(2)
-              into wa_header-info
+              INTO wa_header-info
               SEPARATED BY ':'.
   APPEND wa_header TO t_header.
   CLEAR wa_header.
